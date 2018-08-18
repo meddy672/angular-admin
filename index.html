@@ -20,6 +20,40 @@
         Name:
         <input type="text" ng-model="data.name" />{{ data.name }}
     </div>
+    <br/>
+    <b>ng-repeat example with filter (Click heading)</b>
+    <br>
+    <div ng-init="people=[{name: 'John Doe', city: 'New York'}, {name: 'Bill RIchards', city: 'New Hampshire'},
+    {name: 'Ashley Pyke', city:'Detroit'}, {name: 'Michelle Winters', city: 'Washington DC'}]">
+        <table>
+            <thead>
+                <tr>
+                    <th ng-click="sortBy='name';reverse=!reverse">Name</th>
+                    <th ng-click="sortBy='city';reverse=!reverse">City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="person in people | orderBy: sortBy:reverse">
+                    <td>{{person.name}}</td>
+                    <td>{{person.city}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <b>ng-repeat example with filter</b>
+    <div ng-init="customers=[{name: 'Jane Doe', orderTotal: '119.999', product: 'Spaceship', orderId: 1, joined: '2000-11-12'},
+    {name: 'John Doe', orderTotal: '100.999', product: 'Spaceship', orderId: 2, joined: '2130-12-21'}, 
+    {name: 'Chris Doe', orderTotal: '12.999', product: 'Notebook', orderId: 3, joined: '2010-08-17'},
+    {name: 'Billy Doe', orderTotal: '84.999', product: 'Hulk Hogan', orderId: 4, joined: '1990-04-06'}]">
+
+    <input type="text" data-ng-model="nameText.name" placeholder="enter name">
+    <ul>
+        <li data-ng-repeat="cust in customers | filter:nameText | orderBy:'orderId'">
+       <b>I.D:</b> {{cust.orderId}} - <b>Name:</b>  {{cust.name}} <b>Order Total:</b> {{cust.orderTotal | currency}} <b>joined on:</b> {{cust.joined | date}}
+        </li>
+    </ul>
+</div>
 
     <script src="angular.js"></script>
 </body>
