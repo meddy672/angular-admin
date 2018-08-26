@@ -25,3 +25,9 @@ main {
     color: red; 
     cursor: pointer;
 }
+.success{
+    background-color: #D4EDDB !important;
+}
+.danger{
+    background-color: #F7D7DA !important;
+}
