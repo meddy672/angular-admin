@@ -9,6 +9,7 @@ The Angular Admin project outlines some of the core features of AngularJS. The p
 - Scopes and Directives
 - Animations
 - Controllers
+- Custom Directives
 
 # How to use
 To set up the application you can either download or clone the repository. Once the application is on your computer you can navigate to the directory or your choice and open the **index.html**. The Folders **Factories and Services and Animations** require you to run server.js to initialize the application. Server.js is a server built with NodeJS. Your can start the server via command line with the following command `node server.js`. If you do not have NodeJS installed on your computer, you can install it by following the instructions [here](https://nodejs.org/en/) else use a server of your own choosing and modify the customers object to your specifications.

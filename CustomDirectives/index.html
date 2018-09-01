@@ -1,10 +1,22 @@
 <!doctype html>
 <html ng-app="directivesModule">
     
-    <body>
+    <body ng-controller="CustomersController">
+        <h3>Basic Custom Directive</h3>
         <hello-world></hello-world>
+       <h3>Isoloated Scope</h3>
+        <local-property name="{{customer.name}}"></local-property>
+        <h3>Isolated Scope With Object</h3>
+        <two-way-binding-with-object datasource="customer"></two-way-binding-with-object>
+        <h3>Directive with Link function</h3>
+        <div link-demo>Click Me</div>
 
         <script src="scripts/angular.js"></script>
+        <script src="app/controllers/directivesController.js"></script>
         <script src="app/helloWorldDirective.js"></script>
+        <script src="app/localpropertydemo.js"></script>
+        <script src="app/directiveTwoWayBinding.js"></script>
+        <script src="app/linkDirective.js"></script>
+        
     </body>
 </html>

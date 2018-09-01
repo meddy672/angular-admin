@@ -1,6 +1,6 @@
 (function() {
 
-    var app = angular.module('directivesModule', []);
+    var app = angular.module('directivesModule');
 
     app.directive('helloWorld', function() {
         return {
